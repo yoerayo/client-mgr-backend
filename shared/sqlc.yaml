@@ -1,0 +1,13 @@
+version: "2"
+cloud:
+  project: '01JB8SAWD59YWT2KFZ5HN5Y5E3'
+sql:
+  - name: "client-mgr"
+    engine: "postgresql"
+    queries: "query.sql"
+    schema: "schema.sql"
+    gen:
+      go:
+        package: "db"
+        out: "db"
+        sql_package: "pgx/v5"
